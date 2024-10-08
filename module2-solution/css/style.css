@@ -1,1 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col {
+    background-color: gray;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+h3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    width: 30%;
+    margin: 0;
+    text-align: center;
+}
+
+/* Different backgrounds for the section titles */
+#h3-chicken {
+    background-color: pink;
+}
+
+#h3-beef {
+    background-color: maroon;
+}
+
+#h3-sushi {
+    background-color: yellow;
+}
+
+p {
+    padding: 20px;
+    margin-top: 40px; 
+}
+
+/* Desktop view: 3 equal columns (992px and above) */
+@media (min-width: 992px) {
+    .col {
+        float: left;
+        width: calc(33.333% - 40px);
+    }
+}
+
+/* Tablet view: 2 columns + 1 full-width row (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col {
+        float: left;
+        width: calc(50% - 40px); 
+    }
+    .col:nth-child(3) {
+        width: calc(100% - 40px); 
+    }
+}
+
+/* Mobile view: 1 column (767px and below) */
+@media (max-width: 767px) {
+    .col {
+        float: none;
+        width: 100%;
+        margin: 10px 0; 
+    }
+}
 
