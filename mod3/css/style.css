@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    --bs-gutter-x: 0;
+    padding: 20px
+}
+
+.row {
+    margin: 10px;
+}
+
+.menu-details p {
+    height: 1000px;
+}
